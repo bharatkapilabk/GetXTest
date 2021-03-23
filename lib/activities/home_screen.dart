@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -10,10 +9,11 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) => Scaffold(
       body: Container(
-        width: Get.width*1,
-        height: Get.height*1,
+        width: MediaQuery.of(context).size.width*1,
+        height: MediaQuery.of(context).size.height*1,
         color: Colors.white,
         child: const Center(
+          key: Key('home-success'),
           child: Text('Home'),
         ),
       ),
