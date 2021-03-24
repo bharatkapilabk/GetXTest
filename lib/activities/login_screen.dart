@@ -275,8 +275,8 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                             onPressed: () {
                               if (formKey.currentState.validate()) {
-                                // loginController.login(loginController.emailController.text, loginController.passwordController.text);
-                                Get.to<LoginController>(() => HomeScreen());
+                                loginController.login(loginController.emailController.text, loginController.passwordController.text);
+                                // Get.to<LoginController>(() => HomeScreen());
                                 // loginController.checkForValidity(loginController.emailController.text,loginController.passwordController.text);
                               } else {}
                             },

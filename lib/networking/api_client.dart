@@ -4,7 +4,7 @@ import 'package:dio/dio.dart';
 import 'package:getxtest/models/login_model.dart';
 
 class ApiClient{
-  static final String baseUrl = 'http://joy_laravel/public/api/v1/';
+  static final String baseUrl = 'https://technofyindia.com/joy_laravel/public/api/v1/';
 
 
 
@@ -33,7 +33,8 @@ class ApiClient{
       var loginResp = loginRespFromJson(response.data.toString());
       return loginResp;
     } catch (error) {
-      return LoginResp(message: response.toString());
+      print(error.toString());
+      return LoginResp(message: error.toString());
     }
   }
 }

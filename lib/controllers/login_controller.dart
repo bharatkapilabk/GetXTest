@@ -74,8 +74,8 @@ class LoginController extends GetxController {
         await Get.to<LoginController>(() => HomeScreen());
       } else {
         isLoading.value = false;
-        Get.snackbar<LoginController>('Error', loginResp.message);
         update();
+        Get.snackbar<LoginController>('Error', 'Wrong Email or Password');
       }
     }
   }
